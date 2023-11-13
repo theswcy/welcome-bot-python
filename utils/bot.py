@@ -9,7 +9,7 @@ with open("utils/config.json", "r", encoding = "UTF-8") as f:
 intents = discord.Intents.default()
 intents.message_content = True
 intents.members = True
-bot = commands.Bot(commands_prefix = "!",intents = intents)
+bot = commands.Bot(intents = intents)
 
 for filename in os.listdir("./ready"):
   if filename.endswith(".py") and not filename.startswith("__"):
